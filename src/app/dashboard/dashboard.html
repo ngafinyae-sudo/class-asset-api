@@ -1,0 +1,59 @@
+<div class="dashboard-container">
+
+  <aside class="sidebar">
+
+    <div class="logo">
+      <h2>CLASS ASSET</h2>
+      <p>Registration System</p>
+    </div>
+
+    <nav>
+
+      <a routerLink="/dashboard"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{ exact: true }">
+        Dashboard
+      </a>
+
+      <a routerLink="/assets"
+         routerLinkActive="active">
+        Register / View Assets
+      </a>
+
+      <a href="#">
+        Logout
+      </a>
+
+    </nav>
+
+  </aside>
+
+
+  <main class="main-content">
+
+    <h1>Dashboard</h1>
+
+    <p>Welcome to Class Asset Registration System</p>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Total Assets</h3>
+        <h1>0</h1>
+      </div>
+
+      <div class="card">
+        <h3>Registered Classes</h3>
+        <h1>0</h1>
+      </div>
+
+      <div class="card">
+        <h3>System Status</h3>
+        <h1>Active</h1>
+      </div>
+
+    </div>
+
+  </main>
+
+</div>

@@ -1,0 +1,75 @@
+<h2>Class Asset Registration</h2>
+
+<form (ngSubmit)="registerAsset()">
+
+  <label>Asset Name</label><br>
+  <input
+    type="text"
+    [(ngModel)]="newAsset.asset_name"
+    name="asset_name"
+    required
+  >
+
+  <br><br>
+
+  <label>Asset Code</label><br>
+  <input
+    type="text"
+    [(ngModel)]="newAsset.asset_code"
+    name="asset_code"
+    required
+  >
+
+  <br><br>
+
+  <label>Class Name</label><br>
+  <input
+    type="text"
+    [(ngModel)]="newAsset.class_name"
+    name="class_name"
+    required
+  >
+
+  <br><br>
+
+  <label>Date</label><br>
+  <input
+    type="date"
+    [(ngModel)]="newAsset.asset_date"
+    name="asset_date"
+    required
+  >
+
+  <br><br>
+
+  <button type="submit">Register Asset</button>
+
+</form>
+
+<hr>
+
+<h2>Registered Assets</h2>
+
+<table border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Asset Name</th>
+      <th>Asset Code</th>
+      <th>Class Name</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (asset of assets; track asset.id) {
+      <tr>
+        <td>{{ asset.id }}</td>
+        <td>{{ asset.asset_name }}</td>
+        <td>{{ asset.asset_code }}</td>
+        <td>{{ asset.class_name }}</td>
+        <td>{{ asset.asset_date }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
